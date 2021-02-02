@@ -17,3 +17,17 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a,int &b,int &c,int &d){
+	int card[] = {50,100,500,1000};
+	for(int i = 0; i < 4 ; i++){
+		int money = card[i];
+		int randnum = rand()%4;
+		card[i] = card[randnum];
+		card[randnum] = money;
+	}
+	a = card[0];
+	b = card[1];
+	c = card[2];
+	d = card[3];
+}
